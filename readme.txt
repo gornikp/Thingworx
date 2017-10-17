@@ -1,0 +1,1 @@
+Nie czytaj tego bo będzie muka
