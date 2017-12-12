@@ -22,7 +22,6 @@ public class Client extends ConnectedThingClient{
     public static void startConnection(){
         ClientConfigurator config = new ClientConfigurator();
 
-        LOG.info("START");
         config.setUri(LINK);
         config.setAppKey(KEY);
         config.ignoreSSLErrors(true);
@@ -34,18 +33,52 @@ public class Client extends ConnectedThingClient{
 
             while(!client.getEndpoint().isConnected()) {
                 Thread.sleep(1000);
-                LOG.info("WAIT");
             }
+
+            for(Room room : Room.values()) {
+                ValueCollection params = new ValueCollection();
+                params.SetStringValue("RoomName", room.name);
+                client.invokeService(ThingworxEntityTypes.Things, "RoomCreator", "CreateRoom", params, 5000);
+            }
+
+            for(Room room : Room.values()) {
+                RoomTemplate thing = new RoomTemplate(room.name, "", client);
+                  client.bindThing(thing);
+            }
+
+
+            while(!client.isShutdown()) {
+                // Loop over all the Virtual Things and process them
+                if(client.isConnected()) {
+                    for(VirtualThing thing : client.getThings().values()) {
+                        try {
+                            thing.processScanRequest();
+                        }
+                        catch(Exception eProcessing) {
+                            System.out.println("Error Processing Scan Request for [" + thing.getName() + "] : " + eProcessing.getMessage());
+                        }
+                    }
+                    Thread.sleep(5000);
+                }
+            }
+
+
+
+
+/*
+
+
+
             ValueCollection params = new ValueCollection();
 
            // client.invokeService(ThingworxEntityTypes.Things, "Room1", "getTemerature", params, 5000);
 
             RoomTemplate room1 = new RoomTemplate("Room1", "", client);
-           /* RoomTemplate thing2 = new RoomTemplate("TestR2", "test conbection r2", client);
-            RoomTemplate thing3 = new RoomTemplate("TestR3", "test conbection r3", client);*/
+            RoomTemplate thing2 = new RoomTemplate("TestR2", "test conbection r2", client);
+            RoomTemplate thing3 = new RoomTemplate("TestR3", "test conbection r3", client);
             client.bindThing(room1);
-          /*  client.bindThing(thing2);
-            client.bindThing(thing3);*/
+           client.bindThing(thing2);
+            client.bindThing(thing3);
 
             while(!client.isShutdown()) {
                 // Loop over all the Virtual Things and process them
@@ -65,12 +98,11 @@ public class Client extends ConnectedThingClient{
             }
             LOG.info("END");
 
-
+*/
         } catch (Exception e) {
             LOG.info("ERROR");
             e.printStackTrace();
         }
-
     }
 
 

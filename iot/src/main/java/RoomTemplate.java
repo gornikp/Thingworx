@@ -76,8 +76,8 @@ public class RoomTemplate extends VirtualThing implements Runnable {
     private final static String LIGHTING_FIELD = "lighting";
     private final static String AIR_CONDITIONING_FIELD = "airConditioning";
     private final static String HEATING_FIELD = "heating";
-    private Integer temperature;
-    private Integer humidity;
+    private Double temperature;
+    private Double humidity;
     private Boolean occupancy;
     private Boolean lighting;
     private Boolean airConditioning;
@@ -112,12 +112,12 @@ public class RoomTemplate extends VirtualThing implements Runnable {
         try {
             temperature = getTemperature();
         } catch(Exception ex) {
-            temperature = new Integer(0);
+            temperature = new Double(0);
 
         }
 
         if(temperature == null){
-            temperature = new Integer(0);
+            temperature = new Double(0);
         }
 
         try {
@@ -147,7 +147,7 @@ public class RoomTemplate extends VirtualThing implements Runnable {
     }
 
     @Override
-    public void processScanRequest() throws Exception {
+    public void processScanRequest() throws Exception { //TODO LOGIKA
         //get
         try{
             temperature = getTemperature();
@@ -156,7 +156,7 @@ public class RoomTemplate extends VirtualThing implements Runnable {
             LOG.error("Error " + thingName, ex);
         }
         if(temperature == null){
-            temperature = new Integer(0);
+            temperature = new Double(0);
         }
         temperature+=1;
         LOG.info("Sending " + thingName + " double " + temperature.intValue());
@@ -166,26 +166,22 @@ public class RoomTemplate extends VirtualThing implements Runnable {
             LOG.error("Error " + thingName, ex);
         }
 
-        ValueCollection params = new ValueCollection();
-        params.SetStringValue("text", "text");
-        params.SetNumberValue("num1", 2.3);
-        params.SetNumberValue("num2", 3.4);
-        this.getClient().invokeService(ThingworxEntityTypes.Things, thingName, "TestSer", params, 1000);
+        this.updateSubscribedProperties(5000);
 
 
     }
 
 
-    public Integer getTemperature() {
-        return (Integer) getProperty(TEMPERATURE_FIELD).getValue().getValue();
+    public Double getTemperature() {
+        return (Double) getProperty(TEMPERATURE_FIELD).getValue().getValue();
     }
 
     public void setTemperature() throws Exception {
         setProperty(TEMPERATURE_FIELD, new NumberPrimitive(this.temperature));
     }
 
-    public Integer getHumidity() {
-        return (Integer) getProperty(HUMIDITY_FIELD).getValue().getValue();
+    public Double getHumidity() {
+        return (Double) getProperty(HUMIDITY_FIELD).getValue().getValue();
     }
 
     public void setHumidity() throws Exception {
@@ -226,8 +222,8 @@ public class RoomTemplate extends VirtualThing implements Runnable {
 
     @ThingworxServiceDefinition(name="getHumidity", description="")
     @ThingworxServiceResult(name="result", description="Result", baseType="NUMBER")
-    public Integer getHumidity (
-            @ThingworxServiceParameter( name="humidity", description="", baseType="NUMBER") Integer humidity) throws Exception {
+    public Double getHumidity (
+            @ThingworxServiceParameter( name="humidity", description="", baseType="NUMBER") Double humidity) throws Exception {
         LOG.info("Get humidity: " + humidity.intValue());
 
         return humidity;

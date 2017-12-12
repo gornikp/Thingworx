@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="RemoteThing" description="" documentationContent="" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2017-12-12T08:21:04.911Z" name="RoomThingTemplate" projectName="" tags="Applications:RoomProject" thingPackage="" valueStream="RoomValueStream">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding foldType="NONE" name="airConditioning" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="heating" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="humidity" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="lighting" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="occupancy" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="temperature" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+            </RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding enableQueue="false" name="getHumidity" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="getTemperature" sourceName="" timeout="0"/>
+            </RemoteServiceBindings>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="airConditioning"/>
+                <AlertDefinitions name="heating"/>
+                <AlertDefinitions name="humidity"/>
+                <AlertDefinitions name="lighting"/>
+                <AlertDefinitions name="occupancy"/>
+                <AlertDefinitions name="temperature"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="false" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="airConditioning" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="false" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="heating" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" aspect.maximumValue="100.0" aspect.minimumValue="0.0" baseType="NUMBER" category="" description="" isLocalOnly="false" name="humidity" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="false" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="lighting" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="false" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="occupancy" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="21.0" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="temperature" ordinal="1"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="getHumidity">
+                        <ResultType baseType="NUMBER" description="Result" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="humidity" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="getTemperature">
+                        <ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="temperature" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2017-11-14T08:04:56.623Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : added remote service from browse&#10;" timestamp="2017-11-14T08:57:31.905Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : removed, getHumidity : added remote service from browse&#10;" timestamp="2017-11-14T09:00:50.658Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-11-14T09:03:27.491Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-12-12T08:09:53.077Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:10:24.141Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated, humidity : Updated, occupancy : Updated, lighting : Updated, airConditioning : Updated, heating : Updated&#10;" timestamp="2017-12-12T08:17:10.603Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:20:26.370Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated&#10;" timestamp="2017-12-12T08:21:04.911Z" user="Administrator"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
