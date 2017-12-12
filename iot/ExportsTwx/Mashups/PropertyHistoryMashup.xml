@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-12-12T10:48:31.007+01:00" name="PropertyHistoryMashup" projectName="" rows="0.0" tags="Applications:RoomProject">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things/>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ ],
+        "Properties" : {
+          "Left" : 390,
+          "CancelConfirmationButton" : "button2",
+          "ShowDataLoading" : true,
+          "Label" : "History of Rooms",
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "TabSequence" : 0,
+          "ToolTipField" : "",
+          "IconAlignment" : "left",
+          "Visible" : true,
+          "DisplayName" : "button-2",
+          "Style" : "DefaultButtonStyle",
+          "Height" : 85,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationTitle" : "Confirm Action",
+          "Disabled" : false,
+          "Width" : 160,
+          "ResponsiveLayout" : false,
+          "ConfirmationPrompt" : "Do Action?",
+          "Z-index" : 10,
+          "ConfirmationButton1Label" : "Yes",
+          "RoundedCorners" : true,
+          "__TypeDisplayName" : "Button",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Area" : "UI",
+          "Type" : "button",
+          "Top" : 100,
+          "DefaultConfirmationButton" : "button1",
+          "ContextId" : "",
+          "ConfirmationRequired" : false,
+          "Id" : "button-2",
+          "ConfirmationButton2Label" : "No",
+          "ActiveStyle" : "DefaultButtonActiveStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "Left" : 235,
+          "Description" : "",
+          "CancelConfirmationButton" : "button2",
+          "ShowDataLoading" : true,
+          "Label" : "Rooms Conditions",
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "TabSequence" : 0,
+          "ToolTipField" : "",
+          "IconAlignment" : "left",
+          "Visible" : true,
+          "DisplayName" : "button-3",
+          "Style" : "DefaultButtonStyle",
+          "Height" : 85,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationTitle" : "Confirm Action",
+          "Disabled" : false,
+          "Width" : 150,
+          "ResponsiveLayout" : false,
+          "ConfirmationPrompt" : "Do Action?",
+          "Z-index" : 10,
+          "ConfirmationButton1Label" : "Yes",
+          "RoundedCorners" : true,
+          "__TypeDisplayName" : "Button",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Area" : "UI",
+          "Type" : "button",
+          "Top" : 100,
+          "DefaultConfirmationButton" : "button1",
+          "ContextId" : "",
+          "ConfirmationRequired" : false,
+          "Id" : "button-3",
+          "ConfirmationButton2Label" : "No",
+          "ActiveStyle" : "DefaultButtonActiveStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Left" : 70,
+          "ShowDataLoading" : true,
+          "TargetWindow" : "replace",
+          "ShowCloseButton" : true,
+          "ModalPopupOpacity" : 0.5,
+          "TabSequence" : 0,
+          "FixedPopupHeight" : 0,
+          "ToolTipField" : "",
+          "Alignment" : "left",
+          "IconAlignment" : "left",
+          "Visible" : false,
+          "DisplayName" : "navigation-4",
+          "Style" : "DefaultNavigationStyle",
+          "Height" : 30,
+          "Width" : 200,
+          "ReloadOnReplace" : false,
+          "PopupScrolling" : "auto",
+          "PopupTitle" : "",
+          "ShowMessageIfNoMashup" : false,
+          "MashupName" : "MainMashup",
+          "ClickOutsideToClose" : false,
+          "PopupTitleStyle" : "DefaultPopupTitleStyle",
+          "ResponsiveLayout" : false,
+          "Z-index" : 10,
+          "MashupParameters" : [ ],
+          "Text" : "Mashup Link",
+          "FixedPopupWidth" : 0,
+          "RoundedCorners" : true,
+          "__TypeDisplayName" : "Navigation",
+          "MessageToShow" : "Mashup must be selected",
+          "Area" : "UI",
+          "Type" : "navigation",
+          "Transparent" : false,
+          "Top" : 285,
+          "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+          "Id" : "navigation-4",
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Left" : 415,
+          "ShowDataLoading" : true,
+          "TargetWindow" : "new",
+          "ShowCloseButton" : true,
+          "ModalPopupOpacity" : 0.5,
+          "TabSequence" : 0,
+          "FixedPopupHeight" : 0,
+          "ToolTipField" : "",
+          "Alignment" : "left",
+          "IconAlignment" : "left",
+          "Visible" : false,
+          "DisplayName" : "navigation-5",
+          "Style" : "DefaultNavigationStyle",
+          "Height" : 30,
+          "Width" : 200,
+          "ReloadOnReplace" : false,
+          "PopupScrolling" : "auto",
+          "PopupTitle" : "",
+          "ShowMessageIfNoMashup" : false,
+          "MashupName" : "RealPropertyHistoryMashup",
+          "ClickOutsideToClose" : false,
+          "PopupTitleStyle" : "DefaultPopupTitleStyle",
+          "ResponsiveLayout" : false,
+          "Z-index" : 10,
+          "MashupParameters" : [ ],
+          "Text" : "Mashup Link",
+          "FixedPopupWidth" : 0,
+          "RoundedCorners" : true,
+          "__TypeDisplayName" : "Navigation",
+          "MessageToShow" : "Mashup must be selected",
+          "Area" : "UI",
+          "Type" : "navigation",
+          "Transparent" : false,
+          "Top" : 245,
+          "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+          "Id" : "navigation-5",
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 325,
+        "HideScrollbars" : false,
+        "ResponsiveLayout" : true,
+        "ShowDataLoading" : true,
+        "Z-index" : 10,
+        "VerticalAnchor" : "top",
+        "__TypeDisplayName" : "Panel",
+        "HorizontalAnchor" : "left",
+        "Area" : "UI",
+        "Type" : "panel",
+        "Top" : 135,
+        "Visible" : true,
+        "DisplayName" : "panel-1",
+        "Style" : "DefaultPanelStyle",
+        "Height" : 200,
+        "Id" : "panel-1",
+        "Width" : 300
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 5,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "Navigate",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "navigation-4",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "bf990e65-07cb-4604-ad8e-aabc54787d97",
+    "EventTriggerId" : "button-3",
+    "EventHandlerArea" : "UI"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "Navigate",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "navigation-5",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "ab8b1edf-a2ca-428c-8d34-773445d04af3",
+    "EventTriggerId" : "button-2",
+    "EventHandlerArea" : "UI"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;" timestamp="2017-12-12T10:13:46.786+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:15:28.652+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:15:29.929+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:17:25.943+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:17:26.867+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:40:35.287+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:45:26.997+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T10:45:28.594+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-12-12T10:48:31.007+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>

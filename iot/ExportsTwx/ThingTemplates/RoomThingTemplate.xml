@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="RemoteThing" description="" documentationContent="" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2017-12-12T08:21:04.911Z" name="RoomThingTemplate" projectName="" tags="Applications:RoomProject" thingPackage="" valueStream="RoomValueStream">
+        <ThingTemplate baseThingTemplate="RemoteThing" description="" documentationContent="" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2017-12-12T09:43:34.849+01:00" name="RoomThingTemplate" projectName="" tags="Applications:RoomProject" thingPackage="" valueStream="RoomValueStream">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -80,15 +80,19 @@
                 <Visibility/>
             </InstanceVisibilityPermissions>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2017-11-14T08:04:56.623Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : added remote service from browse&#10;" timestamp="2017-11-14T08:57:31.905Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : removed, getHumidity : added remote service from browse&#10;" timestamp="2017-11-14T09:00:50.658Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-11-14T09:03:27.491Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-12-12T08:09:53.077Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:10:24.141Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated, humidity : Updated, occupancy : Updated, lighting : Updated, airConditioning : Updated, heating : Updated&#10;" timestamp="2017-12-12T08:17:10.603Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:20:26.370Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated&#10;" timestamp="2017-12-12T08:21:04.911Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2017-11-14T09:04:56.623+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : added remote service from browse&#10;" timestamp="2017-11-14T09:57:31.905+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTemperature : removed, getHumidity : added remote service from browse&#10;" timestamp="2017-11-14T10:00:50.658+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-11-14T10:03:27.491+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2017-11-14T10:19:19.949+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:37:15.250+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T08:37:18.598+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-12-12T09:09:53.077+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T09:10:24.141+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated, humidity : Updated, occupancy : Updated, lighting : Updated, airConditioning : Updated, heating : Updated&#10;" timestamp="2017-12-12T09:17:10.603+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T09:20:26.370+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temperature : Updated&#10;" timestamp="2017-12-12T09:21:04.911+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T09:43:34.848+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </ThingTemplate>
     </ThingTemplates>

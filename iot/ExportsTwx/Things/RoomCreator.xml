@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T08:32:08.248Z" name="RoomCreator" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="GenericThing" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T09:43:34.837+01:00" name="RoomCreator" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="GenericThing" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -71,11 +71,7 @@
             <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, thingTemplate : updated&#10;" timestamp="2017-12-12T07:36:00.157Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter RoomName Added, CreateRoom : Inputs updated, Code Updated, Service Added&#10;" timestamp="2017-12-12T07:40:16.813Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T07:42:04.692Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-12T07:42:08.000Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-12-12T08:32:08.247Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2017-12-12T09:43:34.837+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>
