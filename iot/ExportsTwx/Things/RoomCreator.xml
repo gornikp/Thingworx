@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T08:32:08.248Z" name="RoomCreator" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="GenericThing" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T08:32:08.248Z" name="RoomTemplate" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="GenericThing" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>

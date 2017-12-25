@@ -8,6 +8,9 @@ import com.thingworx.types.primitives.NumberPrimitive;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @ThingworxPropertyDefinitions(properties = {
         @ThingworxPropertyDefinition(name="temperature", description="", baseType="NUMBER",
                 aspects={"dataChangeType:VALUE",
@@ -70,6 +73,7 @@ import org.slf4j.LoggerFactory;
 public class RoomTemplate extends VirtualThing implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(RoomTemplate.class);
 
+    private ArrayList<String> roomNames = null;
     private final static String TEMPERATURE_FIELD = "temperature";
     private final static String HUMIDITY_FIELD = "humidity";
     private final static String OCCUPANCY_FIELD = "occupancy";
