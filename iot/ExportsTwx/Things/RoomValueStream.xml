@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="ValueStreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T08:10:40.555Z" name="RoomValueStream" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="ValueStream" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="ValueStreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-12T09:43:34.832+01:00" name="RoomValueStream" projectName="" published="false" tags="Applications:RoomProject" thingTemplate="ValueStream" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -45,8 +45,7 @@
             <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, thingTemplate : updated&#10;configuration : persistenceProvider : updated&#10;" timestamp="2017-12-12T08:09:44.372Z" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-12-12T08:10:40.549Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2017-12-12T09:43:34.831+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>
