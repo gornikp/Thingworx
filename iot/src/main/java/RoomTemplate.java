@@ -5,11 +5,15 @@ import com.thingworx.relationships.RelationshipTypes.ThingworxEntityTypes;
 import com.thingworx.types.collections.ValueCollection;
 import com.thingworx.types.primitives.BooleanPrimitive;
 import com.thingworx.types.primitives.NumberPrimitive;
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 @ThingworxPropertyDefinitions(properties = {
         @ThingworxPropertyDefinition(name="temperature", description="", baseType="NUMBER",
@@ -114,6 +118,107 @@ public class RoomTemplate extends VirtualThing implements Runnable {
 
         //get
         try {
+            heating = getHeating();
+        } catch(Exception ex) {
+            heating = false;
+
+        }
+
+        if(heating == null){
+            heating = false;
+        }
+
+        try {
+            getHeating();
+        } catch (Exception ex) {
+            LOG.error("Error " + thingName, ex);
+        }
+
+
+
+        //get
+        try {
+            airConditioning = getAirConditioning();
+        } catch(Exception ex) {
+            airConditioning = false;
+
+        }
+
+        if(airConditioning == null){
+            airConditioning = false;
+        }
+
+        try {
+            setAirConditioning();
+        } catch (Exception ex) {
+            LOG.error("Error " + thingName, ex);
+        }
+
+
+        //get
+        try {
+            lighting = getLighting();
+        } catch(Exception ex) {
+            lighting = false;
+
+        }
+
+        //get
+        try {
+            lighting = getLighting();
+        } catch(Exception ex) {
+            lighting = false;
+
+        }
+
+        if(lighting == null){
+            lighting = false;
+        }
+
+        try {
+            setLighting();
+        } catch (Exception ex) {
+            LOG.error("Error " + thingName, ex);
+        }
+
+
+        //get
+        try {
+            lighting = getLighting();
+        } catch(Exception ex) {
+            lighting = false;
+
+        }
+
+        if(occupancy == null){
+            occupancy = false;
+        }
+
+        try {
+            setOccupancy();
+        } catch (Exception ex) {
+            LOG.error("Error " + thingName, ex);
+        }
+
+        //get
+        try {
+            humidity = getHumidity();
+        } catch(Exception ex) {
+            humidity = new Double(0);
+
+        }
+
+        if(humidity == null){
+            humidity = new Double(0);
+        }
+
+        try {
+            setHumidity();
+        } catch (Exception ex) {
+            LOG.error("Error " + thingName, ex);
+        }
+
+        try {
             temperature = getTemperature();
         } catch(Exception ex) {
             temperature = new Double(0);
@@ -155,6 +260,11 @@ public class RoomTemplate extends VirtualThing implements Runnable {
         //get
         try{
             temperature = getTemperature();
+            humidity = getHumidity();
+            occupancy = getOccupancy();
+            lighting = getLighting();
+            airConditioning = getAirConditioning();
+            heating = getHeating();
 
         }catch(Exception ex){
             LOG.error("Error " + thingName, ex);
@@ -162,10 +272,64 @@ public class RoomTemplate extends VirtualThing implements Runnable {
         if(temperature == null){
             temperature = new Double(0);
         }
-        temperature+=1;
+        if(humidity == null){
+            humidity = new Double(0);
+        }
+        if(occupancy == null){
+            occupancy = false;
+        }
+        if(lighting == null){
+            lighting = false;
+        }
+        if(airConditioning == null){
+            airConditioning = false;
+        }
+        if(heating == null){
+            heating = false;
+        }
+        Random r = new Random(5564646);
+        temperature+=r.nextDouble();
+        humidity += r.nextDouble() / 2;
+
+        if (temperature < 17) {
+            heating = true;
+            airConditioning = false;
+        }
+
+        else  if (temperature > 23){
+            heating = false;
+            airConditioning = true;
+        }
+        if (humidity > 70)
+        {
+            airConditioning = true;
+        }
+
+
+        if (!occupancy){
+            airConditioning = false;
+            lighting = false;
+            heating = false;
+        }
+        LocalTime localTime = LocalTime.now();
+        if (occupancy && localTime.getHourOfDay() > 13){
+            lighting = true;
+        }
+
+
         LOG.info("Sending " + thingName + " double " + temperature.intValue());
+        LOG.info("Sending " + thingName + " double " + humidity.intValue());
+        LOG.info("Sending " + thingName + " bool " + airConditioning.booleanValue());
+        LOG.info("Sending " + thingName + " bool " + heating.booleanValue());
+        LOG.info("Sending " + thingName + " bool " + occupancy.booleanValue());
+        LOG.info("Sending " + thingName + " bool " + lighting.booleanValue());
         try {
             setTemperature();
+            setHumidity();
+            setAirConditioning();
+            setHeating();
+            setOccupancy();
+            setLighting();
         } catch (Exception ex) {
             LOG.error("Error " + thingName, ex);
         }
@@ -176,16 +340,8 @@ public class RoomTemplate extends VirtualThing implements Runnable {
     }
 
 
-    public Double getTemperature() {
-        return (Double) getProperty(TEMPERATURE_FIELD).getValue().getValue();
-    }
-
     public void setTemperature() throws Exception {
         setProperty(TEMPERATURE_FIELD, new NumberPrimitive(this.temperature));
-    }
-
-    public Double getHumidity() {
-        return (Double) getProperty(HUMIDITY_FIELD).getValue().getValue();
     }
 
     public void setHumidity() throws Exception {
@@ -226,11 +382,17 @@ public class RoomTemplate extends VirtualThing implements Runnable {
 
     @ThingworxServiceDefinition(name="getHumidity", description="")
     @ThingworxServiceResult(name="result", description="Result", baseType="NUMBER")
-    public Double getHumidity (
-            @ThingworxServiceParameter( name="humidity", description="", baseType="NUMBER") Double humidity) throws Exception {
+    public Double getHumidity () throws Exception {
         LOG.info("Get humidity: " + humidity.intValue());
 
         return humidity;
     }
 
+    @ThingworxServiceDefinition(name="getTemperature", description="")
+    @ThingworxServiceResult(name="result", description="Result", baseType="NUMBER")
+    public Double getTemperature () throws Exception {
+            LOG.info("Get tempetature: " + temperature.intValue());
+
+            return temperature;
+        }
 }
