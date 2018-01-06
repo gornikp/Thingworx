@@ -47,7 +47,7 @@ public class Client extends ConnectedThingClient{
             for(String roomName : roomNames) {
                 ValueCollection params = new ValueCollection();
                 params.SetStringValue("RoomName", roomName);
-                client.invokeService(ThingworxEntityTypes.Things, "RoomTemplate", "CreateRoom", params, 5000);
+                client.invokeService(ThingworxEntityTypes.Things, "RoomCreator", "CreateRoom", params, 5000);
             }
 
             for(String roomName : roomNames) {
