@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ApplicationKeys>
+        <ApplicationKey clientName="" description="" documentationContent="" expirationDate="2117-10-21T08:40:33.286+01:00" homeMashup="" ipWhitelist="" keyId="dd22274d-abc3-47b0-86d8-8e363ba2b8fc" lastModifiedDate="2018-01-08T12:20:32.285Z" name="RoomProject" projectName="" tags="Applications:RoomProject" userNameReference="Administrator">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, userNameReference : updated&#10;" timestamp="2017-11-14T07:40:33.332Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2018-01-08T12:20:32.285Z" user="Administrator"/>
+            </ConfigurationChanges>
+        </ApplicationKey>
+    </ApplicationKeys>
+</Entities>
